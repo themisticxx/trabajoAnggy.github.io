@@ -1,0 +1,325 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+img{
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.contenedor{
+    background-color: rgb(245, 245, 245);
+    padding-bottom: 40px;
+}
+.header{
+    padding-top: 10px;
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-weight: 900;
+    font-size: 20px;
+
+}
+
+.logo span{
+    color: orange;
+}
+.hamburguesa{
+    width: 30px;
+}
+@media (min-width:768px) {
+    .hamburguesa{
+        display: none;
+    }
+    
+}
+.hamburguesa:hover{
+    cursor: pointer;
+}
+.menu{
+    display: none;
+}
+@media (min-width:768px) {
+    .menu{
+        display: flex;
+    }
+    
+}
+.navegacion{
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    list-style: none;
+    
+}
+@media (min-width:768px) {
+    .navegacion{
+        gap: 30px;
+    }
+    
+}
+
+@media (min-width:992px) {
+    .navegacion{
+        gap: 50px;
+    }
+    
+}
+.navegacion a{
+    text-decoration: none;
+    color: rgb(97, 97, 97);
+    font-weight: 400;
+    font-size: 15px;
+}
+.navegacion a:hover{
+    color: black;
+
+}
+
+.navegacion li:last-child{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.navegacion li:last-child a{
+    font-weight: 700;
+
+}
+.navegacion li:last-child a:last-child{
+    background-color: orange;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid orange;
+}
+
+.navegacion li:last-child a:last-child:hover{
+    background-color: white;
+    color: orange;
+}
+
+.presentacion{
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+@media (min-width:768px) {
+    .presentacion{
+        flex-direction:row;
+    }
+}
+
+.informacion{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+@media (min-width: 768px){
+    .informacion{
+        text-align: start;
+        align-items: flex-start;
+    }
+}
+
+/* 1. Asegúrate de que el contenedor del botón no lo estire */
+.informacion-button {
+    display: flex;
+    justify-content: center; /* Alinea el botón a la izquierda */
+    width: 100%;
+   
+}
+@media (min-width:768px) {
+    .informacion-button{
+        justify-content: flex-start;
+    }
+}
+
+/* 2. Dale estilo al botón para que se vea como el de 'Register' */
+.informacion-button button {
+    background-color: #ffa500; /* El naranja que estás usando */
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Espacio interno para que no se vea pegado */
+    border-radius: 20px; /* Bordes redondeados */
+    font-weight: bold;
+    cursor: pointer;
+    width: fit-content; /* IMPORTANTE: Hace que el botón solo ocupe su propio ancho */
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.informacion-button button:hover {
+    background-color: #e69500;
+}
+
+
+.informacion-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.informacion-img img {
+    width: 100%;
+    max-width: 500px; /* Evita que crezca demasiado */
+    height: auto;
+    margin: 50px;
+    
+    /* Estética moderna */
+    border-radius: 30px; /* Bordes suaves */
+    box-shadow: 0 20px 40px rgba(255, 21, 21, 0.15); /* Sombra profunda pero suave */
+    
+    /* Efecto de animación */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Efecto al pasar el mouse (Hover) */
+.informacion-img img:hover {
+    transform: translateY(-10px) scale(1.04); /* Sube un poco y crece un 2% */
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajuste para pantallas grandes */
+@media (min-width: 768px) {
+    .informacion-img {
+        padding: 0;
+        justify-content: flex-end; /* La pega más a la derecha en escritorio */
+    }
+}
+
+.comida{
+    width: 90%;
+    margin-inline: auto;
+
+}
+.platos{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 86px;
+}
+
+@media (min-width: 768px) {
+    .platos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .platos{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.comida-titulo{
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 85px;
+}
+@media (min-width: 768px) {
+    .comida-titulo{
+        text-align: start;
+    }
+}
+
+.plato{
+    width: 80%;
+    margin-inline: auto;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid rgba(196, 196, 196, 0.426);
+}
+.plato img{
+    border-radius: 10px;
+}
+.plato-info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.plato p{
+    font-weight: 900;
+}
+.plato button{
+    background-color: orange;
+    color: white;
+    font-weight: 900;
+    padding-left:10px;
+    padding-right: 10px;
+
+    border-radius: 100px;
+    font-size: 25px;
+    margin: 10px;
+}
+
+.contactanos{
+    padding-top: 10px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.contacto h3 {
+    margin-top: 0;
+    color:#d32f2f;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+.contacto-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.contacto-item i{
+    margin-right: 15px;
+    color: #d32f2f;
+    width: 20px;
+    text-align: center;
+}
+
+.contacto-item:hover{
+    color: #000;
+    cursor: default;
+}
+
+.contactanos a{text-decoration: none;
+     color: black;
+    cursor: default;}
+
+@media (min-width:768px) {
+    .video video{
+        width: 340px;
+        height: 340px;
+    }
+    
+}
